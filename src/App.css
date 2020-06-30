@@ -1,0 +1,108 @@
+@font-face {
+  font-family: titleFont;
+  src: url("./assets/VarelaRound-Regular.ttf") format("truetype");
+}
+
+body,
+html {
+  height: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.fullBackground {
+  height: -webkit-fill-available;
+  object-fit: fill;
+  width: 100%;
+}
+.front-title-container{
+  position: fixed;
+  top:7%;
+  width: 100%;
+  text-align: center;
+  font-family: titleFont;
+}
+.languagesDiv {
+  position: fixed;
+  display: flex;
+  grid-row-gap: 8px;
+  z-index: 99;
+  bottom: 25px;
+  left: 40px;
+}
+.addMargin {
+  margin-right: 15px;
+}
+.homeBtn {
+  position: fixed;
+  bottom: 15px;
+  right: 200px;
+  z-index: 10;
+}
+.general-kapostin-container{
+  position: fixed;
+  top:30%;
+  font-size: small;
+  font-family: papyrus;
+  white-space: pre;
+  width: 204px;
+  height: 95px;
+  text-align: center;
+}
+.kapostin-font-weight{
+  font-weight: 100;
+}
+.mini-kapostin-container{
+  position: fixed;
+  font-size: small;
+  font-family: papyrus;
+  white-space: pre;
+}
+.kapostin-box-first-text{
+  font-size: 17px;
+  margin-top: 11px;
+}
+.particular-main-container{
+  position: fixed;
+  top: 11%;
+  width: 1035px;
+  height: 790px;
+  font-family: papyrus;
+  white-space: pre-line;
+  overflow: scroll;
+}
+.particular-position-heb{
+  right: 6%;
+}
+.particular-position-en{
+  left: 6%;
+}
+.particular-text-heb{
+  direction: rtl;
+}
+.backBtn{
+  position: fixed;
+  bottom: 11px;
+  right: 270px;
+  z-index: 10;
+}
+.particular-title{
+  font-family: titleFont;
+  font-size: 24px;
+}
+.mini-title-particular{
+  font-size: larger;
+}
+.scroll-button-container {
+  position: fixed;
+  bottom: 10%;
+  left: 55%;
+}
+.scroll-container-heb{
+  position: fixed;
+  bottom: 10%;
+  right: 52%;
+}
+.left-scroll {
+  margin-right: 20px;
+}
