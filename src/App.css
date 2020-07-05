@@ -106,3 +106,44 @@ html {
 .left-scroll {
   margin-right: 20px;
 }
+.front-page-figures{
+  position: fixed;
+  bottom: -19px;
+  z-index: 10;
+}
+.front-page-titles{
+  position: fixed;
+  top:20px;
+  z-index: 10;
+}
+.onclick-circle{
+  position: fixed;
+  background:transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 15;
+}
+.lone-squre{
+  bottom: 25px;
+  right: 39%;
+  border-radius: 0;
+  height: 460px;
+  width: 108px;
+}
+.video-position{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: -1;
+}
+.front-lines{
+  z-index: 10;
+}
+.front-box-class{
+  opacity: 1;
+  transition: opacity 1s;
+  }
+.front-box-class.fade{
+    opacity: 0;
+}

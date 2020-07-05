@@ -5,49 +5,77 @@ const hebrewText = {
     {
       name: 'dmitry',
       title: `דמיטרי דמיטרייביץ סמ'ישלייב`,
-      picSrc: 'dimitryPic',
+      picSrc: 'dimitryPic.png',
       videoSrc: 'dimitryVid',
       css: {
-        left: '306px',
+        left: '22px',
       },
       titleStyle: {
+        top: '15%',
+        left: '25%'
 
+      },
+      circleStyle: {
+        top: `18%`,
+        left: `16%`,
+        borderRadius: `0`,
+        height: `553px`
       }
     },
     {
       name: 'architects',
       title: `אדריכלים`,
-      picSrc: 'architectsPic',
+      picSrc: 'architectsPic.png',
       videoSrc: 'architectsVid',
       css: {
-        left: '644px',
+        right: '25px',
       },
       titleStyle: {
-
+        top: '20%',
+        right: '12%'
+      },
+      circleStyle: {
+        top: `16%`,
+        left: `54%`,
+        height: `347px`
       }
     },
     {
       name: 'gurd',
       title: `מרקו דג'וריק`,
-      picSrc: 'gurdPic',
+      picSrc: 'gurdPic.png',
       videoSrc: 'gurdVid',
       css: {
-        right: '345px'
+        left: '316px'
       },
       titleStyle: {
-
+        top: '12%',
+        left: '40%'
+      },
+      circleStyle: {
+        top: `23%`,
+        left: `34%`,
+        height: `301px`,
+        width: `94px`
       }
     },
     {
       name: 'pilgram',
       title: `אברהם הצליין הנצחי`,
-      picSrc: 'pilgramPic',
+      picSrc: 'pilgramPic.png',
       videoSrc: 'pilgramVid',
       css: {
-        left: '1012px',
+        left: '643px',
       },
       titleStyle: {
-
+        top: '15%',
+        right: '33%'
+      },
+      circleStyle: {
+        top: `59%`,
+        left: `31%`,
+        height: `409px`,
+        borderRadius: `0`
       }
     }
   ],

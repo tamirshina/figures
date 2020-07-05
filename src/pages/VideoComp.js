@@ -1,16 +1,48 @@
-import React from 'react';
-import videoZoomInEN from "../assets/15_transion_ENG.mp4";
-import videoZoomInHE from "../assets/16_transion_HEB.mp4";
-import videoPoster from "../assets/01_background.png";
-import isLeftToRight from '../fragments/IsLeftToRightFunc';
-import '../css/Styles.css';
+import React, { useContext, useEffect } from 'react';
+import LangContext from "../LangContext";
+import architectsVid from '../assets/transitions/architectsVid.mp4';
+import dimitryVid from '../assets/transitions/dimitryVid.mp4';
+import gurdVid from '../assets/transitions/dimitryVid.mp4';
+import pilgremVid from '../assets/transitions/dimitryVid.mp4';
+import '../App.css';
 
 
-function VideoComp({ playVideoLogic }) {
+function VideoComp({ playVideoLogic, typeFigure }) {
+
+  const { lang } = useContext(LangContext);
+
+
+  useEffect(
+
+    () => {
+
+    }, []);
+
+  function isLeftToRight() {
+    if (lang === "hebrew") {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  function chooseVideo() {
+    switch (typeFigure) {
+      case 'dimitry':
+        return dimitryVid;
+      case 'gurd':
+        return gurdVid;
+      case 'pilgrem':
+        return pilgremVid;
+      case 'architects':
+        return architectsVid;
+      default:
+        return dimitryVid;
+    }
+  }
 
   return (
 
-    <video onClick={playVideoLogic} id='zoomInVideo' src={isLeftToRight() ? videoZoomInEN : videoZoomInHE} className='fullBackground' />
+    <video onClick={playVideoLogic} src={dimitryVid} id='zoomInVideo' className='fullBackground video-position' />
   );
 }
 

@@ -5,12 +5,16 @@ import LanguageBiv from './fragments/LanguageButtons'
 import './App.css';
 import ParticularInfoPage from './pages/ParticularInfoPage';
 import VideoComp from './pages/VideoComp';
+import architectsVid from './assets/transitions/architectsVid.mp4';
+import dimitryVid from './assets/transitions/dimitryVid.mp4';
+import gurdVid from './assets/transitions/dimitryVid.mp4';
+import pilgremVid from './assets/transitions/dimitryVid.mp4';
 
 function App() {
 
   const [isFrontPage, setIstFrontPage] = useState(true);
   const [isAnimation, setIsAnimation] = useState(false);
-  const [typeOfParticularInfo, setTypeOfParticularInfo] = useState();
+  const [typeOfParticularInfo, setTypeOfParticularInfo] = useState('dimitry');
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
 
   const homeBtn = () => {
@@ -18,36 +22,61 @@ function App() {
     setIsParticularInfoPage(false);
   };
 
-  const moveToParticularInfo = (e) => {
-
-    if (e) {
-      setTypeOfParticularInfo(e.currentTarget.id);
-      setIsParticularInfoPage(true);
-      setIstFrontPage(false)
+  function chooseVideo(typeFigure) {
+    switch (typeFigure) {
+      case 'dimitry':
+        return dimitryVid;
+      case 'gurd':
+        return gurdVid;
+      case 'pilgrem':
+        return pilgremVid;
+      case 'architects':
+        return architectsVid;
+      default:
+        return dimitryVid;
     }
   }
 
-  const playVideo = () => {
+  const moveToParticularInfo = (e) => {
+
+    let vid = chooseVideo(e.currentTarget.id);
+
+    if (e) {
+      setTypeOfParticularInfo(e.currentTarget.id);
+      let els = document.getElementsByClassName('front-box-class');
+
+      Array.prototype.forEach.call(els, function (el) {
+        el.classList.add('fade')
+      });
+
+      playVideo(vid);
+
+      setTimeout(function () {
+        setIstFrontPage(false)
+
+      }, 1000);
+      //setIsParticularInfoPage(true);
+    }
+  }
+
+  const playVideo = (typeVideo) => {
 
     const videoElem = document.getElementById('zoomInVideo');
-    const textParaEl = document.getElementById('frontBox');
-    if (videoElem) {
-      videoElem.play();
-      videoElem.onplay = (event) => {
-        if (textParaEl) {
-          textParaEl.classList.add('fade')
-        }
-        setTimeout(function () {
-          setIsTextInsert(false);
-        }, 2000);
-        setTimeout(function () { setIsInfoRouting(true); }, 3500);
-        setIsShowButtons(false);
 
+    videoElem.src = typeVideo;
+
+    if (videoElem) {
+      setTimeout(function () {
+        videoElem.play();
+      }, 100);
+      videoElem.onplay = (event) => {
       }
       videoElem.onended = (event) => {
-        setIsFrontPage(false);
-        setIsTextInsert(false);
-        setIsShowButtons(true);
+        console.log("end");
+
+        //setIsFrontPage(false);
+        // setIsTextInsert(false);
+        setIstFrontPage(true);
       };
     }
   }
@@ -57,7 +86,8 @@ function App() {
     <>
       {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
       {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
-      {isAnimation && <VideoComp />}
+      {isAnimation && <VideoComp typeFigure={typeOfParticularInfo} />}
+      <VideoComp />
       <LanguageBiv />
       {!isFrontPage && <HomeBtn homeBtnLogic={homeBtn} />}
     </>
