@@ -7,19 +7,24 @@ import ParticularInfoPage from './pages/ParticularInfoPage';
 import VideoComp from './pages/VideoComp';
 import architectsVid from './assets/transitions/architectsVid.mp4';
 import dimitryVid from './assets/transitions/dimitryVid.mp4';
-import gurdVid from './assets/transitions/dimitryVid.mp4';
-import pilgremVid from './assets/transitions/dimitryVid.mp4';
+import gurdVid from './assets/transitions/gurdVid.mp4';
+import pilgremVid from './assets/transitions/pilgramVid.mp4';
+// import dimitryVid from './assets/newTransition/dimitryVid.mp4';
+// import gurdVid from './assets/newTransition/guard-transion03.mp4';
+// import pilgremVid from './assets/newTransition/Abraham-transion03.mp4';
+// import architectsVid from './assets/newTransition/Architects-transion03.mp4';
 
 function App() {
 
   const [isFrontPage, setIstFrontPage] = useState(true);
-  const [isAnimation, setIsAnimation] = useState(false);
   const [typeOfParticularInfo, setTypeOfParticularInfo] = useState('dimitry');
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
 
   const homeBtn = () => {
     setIstFrontPage(true);
-    setIsParticularInfoPage(false);
+    setTimeout(function () {
+      setIsParticularInfoPage(false);
+    }, 300);
   };
 
   function chooseVideo(typeFigure) {
@@ -28,7 +33,7 @@ function App() {
         return dimitryVid;
       case 'gurd':
         return gurdVid;
-      case 'pilgrem':
+      case 'pilgram':
         return pilgremVid;
       case 'architects':
         return architectsVid;
@@ -50,33 +55,24 @@ function App() {
       });
 
       playVideo(vid);
-
       setTimeout(function () {
         setIstFrontPage(false)
+      }, 100);
 
-      }, 1000);
-      //setIsParticularInfoPage(true);
     }
   }
 
   const playVideo = (typeVideo) => {
 
     const videoElem = document.getElementById('zoomInVideo');
-
     videoElem.src = typeVideo;
 
     if (videoElem) {
-      setTimeout(function () {
-        videoElem.play();
-      }, 100);
+      videoElem.play();
       videoElem.onplay = (event) => {
       }
       videoElem.onended = (event) => {
-        console.log("end");
-
-        //setIsFrontPage(false);
-        // setIsTextInsert(false);
-        setIstFrontPage(true);
+        setIsParticularInfoPage(true);
       };
     }
   }
@@ -86,7 +82,6 @@ function App() {
     <>
       {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
       {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
-      {isAnimation && <VideoComp typeFigure={typeOfParticularInfo} />}
       <VideoComp />
       <LanguageBiv />
       {!isFrontPage && <HomeBtn homeBtnLogic={homeBtn} />}

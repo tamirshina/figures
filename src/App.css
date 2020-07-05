@@ -75,7 +75,7 @@ html {
   right: 6%;
 }
 .particular-position-en{
-  left: 6%;
+  left: 41%;
 }
 .particular-text-heb{
   direction: rtl;
@@ -140,10 +140,26 @@ html {
 .front-lines{
   z-index: 10;
 }
-.front-box-class{
+.fade-class{
   opacity: 1;
   transition: opacity 1s;
   }
-.front-box-class.fade{
+.fade-class.fade{
     opacity: 0;
+}
+.down-frame-position{
+  z-index: 11;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.left-frame-position{
+  position: fixed;
+  left: 0;
+  z-index: 11;
+}
+.right-frame-position{
+  position: fixed;
+  right: 0;
+  z-index: 11;
 }

@@ -13,6 +13,7 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
   const textParaEl = useRef(null);
 
   const [isRightToLeft, setIsRightToLeft] = useState(false);
+  const [isScrollBtn, setIsScrollBtn] = useState(true);
 
   useEffect(() => {
     if (lang === "hebrew") {
@@ -20,7 +21,10 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
     } else {
       setIsRightToLeft(false);
     }
-  }, [lang]);
+    if (typeOfParticularInfo === 'gurd' || typeOfParticularInfo === 'pilgram') {
+      setIsScrollBtn(false);
+    }
+  }, [lang, typeOfParticularInfo]);
 
   function resetTimer() {
     removeTimer();
@@ -59,7 +63,7 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
 
   return (
     <>
-      <div ref={textParaEl} id="particularText" className={isRightToLeft ? "particular-main-container particular-position-heb" : "particular-main-container particular-position-en"}>
+      <div ref={textParaEl} id="particularText" className={"particular-main-container"} style={infoToInsert().css}>
         <div className={isRightToLeft ? 'particular-text-heb' : undefined}>
           <h1 className='particular-title' dangerouslySetInnerHTML={createMarkup(infoToInsert().title)} />
           <div className={isRightToLeft ? "heb-side-shape" : "side-shape"}></div>
@@ -69,7 +73,7 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
           ></p>
         </div>
       </div>
-      <ScrollBtns homeBtnLogic={homeBtnLogic} scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} />
+      {isScrollBtn && <ScrollBtns homeBtnLogic={homeBtnLogic} scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} />}
     </>
   );
 }

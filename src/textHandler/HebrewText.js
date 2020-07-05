@@ -8,11 +8,11 @@ const hebrewText = {
       picSrc: 'dimitryPic.png',
       videoSrc: 'dimitryVid',
       css: {
-        left: '22px',
+        left: '-8px'
       },
       titleStyle: {
         top: '15%',
-        left: '25%'
+        left: '16%'
 
       },
       circleStyle: {
@@ -28,11 +28,12 @@ const hebrewText = {
       picSrc: 'architectsPic.png',
       videoSrc: 'architectsVid',
       css: {
-        right: '25px',
+        right: '-36px',
+        bottom: '-5px'
       },
       titleStyle: {
-        top: '20%',
-        right: '12%'
+        top: '22%',
+        right: '11%'
       },
       circleStyle: {
         top: `16%`,
@@ -46,11 +47,12 @@ const hebrewText = {
       picSrc: 'gurdPic.png',
       videoSrc: 'gurdVid',
       css: {
-        left: '316px'
+        left: '291px',
+        bottom: '-26px'
       },
       titleStyle: {
         top: '12%',
-        left: '40%'
+        left: '38%'
       },
       circleStyle: {
         top: `23%`,
@@ -65,11 +67,12 @@ const hebrewText = {
       picSrc: 'pilgramPic.png',
       videoSrc: 'pilgramVid',
       css: {
-        left: '643px',
+        left: '615px',
+        bottom: '-40px'
       },
       titleStyle: {
         top: '15%',
-        right: '33%'
+        right: '28%'
       },
       circleStyle: {
         top: `59%`,
