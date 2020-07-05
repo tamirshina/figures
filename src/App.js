@@ -21,10 +21,9 @@ function App() {
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
 
   const homeBtn = () => {
+
+    setIsParticularInfoPage(false);
     setIstFrontPage(true);
-    setTimeout(function () {
-      setIsParticularInfoPage(false);
-    }, 300);
   };
 
   function chooseVideo(typeFigure) {

@@ -21,10 +21,10 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
     } else {
       setIsRightToLeft(false);
     }
-    if (typeOfParticularInfo === 'gurd' || typeOfParticularInfo === 'pilgram') {
+    if (typeOfParticularInfo === 'gurd' || typeOfParticularInfo === 'pilgram' || (isRightToLeft === true && typeOfParticularInfo !== 'architects')) {
       setIsScrollBtn(false);
     }
-  }, [lang, typeOfParticularInfo]);
+  }, [lang, typeOfParticularInfo, isRightToLeft]);
 
   function resetTimer() {
     removeTimer();
@@ -73,7 +73,7 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
           ></p>
         </div>
       </div>
-      {isScrollBtn && <ScrollBtns homeBtnLogic={homeBtnLogic} scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} />}
+      {isScrollBtn && <ScrollBtns scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} typeOfParticularInfo={typeOfParticularInfo} />}
     </>
   );
 }

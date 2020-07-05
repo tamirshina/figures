@@ -1,24 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
 import scrollUpImg from "../assets/11-up-arrow.png";
 import scrollDwonImg from "../assets/02-down-arrow.png";
-import LangContext from "../LangContext";
 import "../App.css";
 
-function ScrollingBtn({ scrollDown, scrollUp }) {
+function ScrollingBtn({ scrollDown, scrollUp, typeOfParticularInfo }) {
 
-    const lang = useContext(LangContext).lang;
-
-    function isLeftToRight() {
-        if (lang === "hebrew") {
-            return false;
-        } else {
+    function isDimitry() {
+        if (typeOfParticularInfo === "dimitry") {
             return true;
+        } else {
+            return false;
         }
     }
 
 
     return (
-        <div className={isLeftToRight() ? "scroll-button-container" : "scroll-container-heb"} >
+        <div className={isDimitry() ? "scroll-button-dimitry" : "scroll-button-architects"} >
             <img
                 src={scrollUpImg}
                 alt="scroll-up"

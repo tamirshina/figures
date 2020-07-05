@@ -98,6 +98,16 @@ html {
   bottom: 10%;
   left: 55%;
 }
+.scroll-button-dimitry {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+}
+.scroll-button-architects {
+  position: fixed;
+  bottom: 10%;
+  left: 37%;
+}
 .scroll-container-heb{
   position: fixed;
   bottom: 10%;
