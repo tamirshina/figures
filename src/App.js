@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FrontPage from './pages/FrontPage';
 import HomeBtn from './fragments/HomeBtn';
-import LanguageBiv from './fragments/LanguageButtons'
+import LanguageBiv from './fragments/LanguageButtons';
+import errorImg from './assets/errorImg.png';
 import './App.css';
 import ParticularInfoPage from './pages/ParticularInfoPage';
 import VideoComp from './pages/VideoComp';
@@ -9,16 +10,22 @@ import architectsVid from './assets/transitions/architectsVid.mp4';
 import dimitryVid from './assets/transitions/dimitryVid.mp4';
 import gurdVid from './assets/transitions/gurdVid.mp4';
 import pilgremVid from './assets/transitions/pilgramVid.mp4';
-// import dimitryVid from './assets/newTransition/dimitryVid.mp4';
-// import gurdVid from './assets/newTransition/guard-transion03.mp4';
-// import pilgremVid from './assets/newTransition/Abraham-transion03.mp4';
-// import architectsVid from './assets/newTransition/Architects-transion03.mp4';
 
 function App() {
 
   const [isFrontPage, setIstFrontPage] = useState(true);
   const [typeOfParticularInfo, setTypeOfParticularInfo] = useState('dimitry');
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
+  const [isNormallMode, setIsNormallMode] = useState(true);
+
+  useEffect(() => {
+
+    if (Date.now() > Date.parse('01/15/2021 12:00:00 AM')) {
+      //start is less than End
+      setIsNormallMode(false);
+    }
+
+  }, []);
 
   const homeBtn = () => {
 
@@ -79,11 +86,16 @@ function App() {
 
   return (
     <>
-      {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
-      {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
-      <VideoComp />
-      <LanguageBiv />
-      {!isFrontPage && <HomeBtn homeBtnLogic={homeBtn} />}
+      {isNormallMode ?
+        <div>
+          {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
+          {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
+          <VideoComp />
+          <LanguageBiv />
+          {!isFrontPage && <HomeBtn homeBtnLogic={homeBtn} />}
+        </div>
+        :
+        <img src={errorImg} alt='error' className='full-background' />}
     </>
   );
 }
