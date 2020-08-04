@@ -111,7 +111,8 @@ const russianText = {
       `,
       css: {
         left: '41%'
-      }
+      },
+      isScroll: true
     },
     architects: {
       title: `Рассказ об охраннике`,
@@ -138,7 +139,8 @@ const russianText = {
       css: {
         left: '4%',
         width: '735px'
-      }
+      },
+      isScroll: true
     },
     gurd: {
       title: `Каирская гениза`,
@@ -153,7 +155,8 @@ const russianText = {
       `,
       css: {
         left: '41%'
-      }
+      },
+      isScroll: false,
     },
     pilgram: {
       title: `Авраам вечный паломник
@@ -168,7 +171,8 @@ const russianText = {
       `,
       css: {
         left: '4%',
-      }
+      },
+      isScroll: false,
     }
   }
 }

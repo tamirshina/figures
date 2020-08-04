@@ -101,7 +101,8 @@ The Patriarch of Jerusalem bestowed Smyshlyayev with the respectful title of “
           `,
             css: {
                 left: '41%'
-            }
+            },
+            isScroll: true
         },
         architects: {
             title: `Architects in service of the IOPS`,
@@ -127,7 +128,8 @@ The Patriarch of Jerusalem bestowed Smyshlyayev with the respectful title of “
             css: {
                 left: '4%',
                 width: '735px'
-            }
+            },
+            isScroll: true
         },
         gurd: {
             title: `Marko Djuric`,
@@ -140,7 +142,8 @@ The Patriarch of Jerusalem bestowed Smyshlyayev with the respectful title of “
           `,
             css: {
                 left: '41%'
-            }
+            },
+            isScroll: true
         },
         pilgram: {
             title: `Abraham the Eternal Pilgrim
@@ -156,7 +159,8 @@ The Patriarch of Jerusalem bestowed Smyshlyayev with the respectful title of “
           `,
             css: {
                 left: '4%',
-            }
+            },
+            isScroll: true
         }
     }
 }

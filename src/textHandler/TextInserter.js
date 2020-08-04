@@ -46,6 +46,10 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
     }
   }
 
+  function isScrollContainer() {
+    return whichFileToUse().particularInfo[typeOfParticularInfo].isScroll;
+  }
+
   function infoToInsert() {
     return whichFileToUse().particularInfo[typeOfParticularInfo];
   }
@@ -53,12 +57,12 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
   const scrollAndUpdateDown = () => {
 
     resetTimer();
-    textParaEl.current.scrollTop += 10;
+    textParaEl.current.scrollTop += 50;
   }
 
   const scrollAndUpdateUp = () => {
 
-    textParaEl.current.scrollTop -= 10;
+    textParaEl.current.scrollTop -= 50;
   }
 
   return (
@@ -73,7 +77,7 @@ function TextInserter({ homeBtnLogic, typeOfParticularInfo }) {
           ></p>
         </div>
       </div>
-      {isScrollBtn && <ScrollBtns scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} typeOfParticularInfo={typeOfParticularInfo} />}
+      {isScrollContainer() && <ScrollBtns scrollDown={scrollAndUpdateDown} scrollUp={scrollAndUpdateUp} typeOfParticularInfo={typeOfParticularInfo} />}
     </>
   );
 }

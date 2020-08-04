@@ -14,6 +14,7 @@ html {
   height: -webkit-fill-available;
   object-fit: fill;
   width: 100%;
+  margin-bottom: -3px;
 }
 .front-title-container{
   position: fixed;
@@ -66,7 +67,7 @@ html {
   position: fixed;
   top: 11%;
   width: 1035px;
-  height: 790px;
+  height: 850px;
   font-family: papyrus;
   white-space: pre-line;
   overflow: scroll;
@@ -100,12 +101,12 @@ html {
 }
 .scroll-button-dimitry {
   position: fixed;
-  bottom: 10%;
-  right: 5%;
+  bottom: 5%;
+  right: 29%;
 }
 .scroll-button-architects {
   position: fixed;
-  bottom: 10%;
+  bottom: 7%;
   left: 37%;
 }
 .scroll-container-heb{
@@ -172,4 +173,7 @@ html {
   position: fixed;
   right: 0;
   z-index: 11;
+}
+#particularTextBox{
+  font-size: 20px;
 }

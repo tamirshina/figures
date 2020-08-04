@@ -6,7 +6,7 @@ import "../App.css";
 function ScrollingBtn({ scrollDown, scrollUp, typeOfParticularInfo }) {
 
     function isDimitry() {
-        if (typeOfParticularInfo === "dimitry") {
+        if (typeOfParticularInfo === "dimitry" || typeOfParticularInfo === "gurd") {
             return true;
         } else {
             return false;
