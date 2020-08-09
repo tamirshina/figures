@@ -135,9 +135,24 @@ html {
   border-radius: 50%;
   z-index: 15;
 }
+.gurd-pilgrame{
+  position: fixed;
+  background:transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 15;
+}
 .lone-squre{
   bottom: 25px;
   right: 39%;
+  border-radius: 0;
+  height: 460px;
+  width: 108px;
+}
+.lone-squre-gurd-pilgrame{
+  bottom: 32%;
+  right: 62%;
   border-radius: 0;
   height: 460px;
   width: 108px;

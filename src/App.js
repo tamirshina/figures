@@ -68,9 +68,10 @@ function App() {
       setTimeout(function () {
         setIstFrontPage(false)
       }, 100);
-
     }
   }
+
+
 
   const playVideo = (typeVideo) => {
 
@@ -86,7 +87,6 @@ function App() {
       };
     }
   }
-
 
   return (
     <>

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import hebrewText from '../textHandler/HebrewText';
 import englishText from '../textHandler/EnglishText';
 import russianText from '../textHandler/RussianText';
@@ -28,6 +28,7 @@ function FrontPage({ moveToParticularInfo }) {
         <>
             <img className='full-background' alt='background' src={frontPageBackground} />
             <div name='transpernt-squre' className='onclick-circle lone-squre' />
+            <div name='transpernt-squre' className='gurd-pilgrame lone-squre-gurd-pilgrame' />
             <img src={downFrame} alt='downFrame' className='down-frame-position' />
             <img src={rightFrame} alt='rightFrame' className='right-frame-position' />
             <img src={leftFrame} alt='leftFrame' className='left-frame-position' />
@@ -35,7 +36,7 @@ function FrontPage({ moveToParticularInfo }) {
                 return (
 
                     <div key={item.name} >
-                        <div className='front-page-titles' style={item.titleStyle} onClick={moveToParticularInfo}>
+                        <div className='front-page-titles' style={item.titleStyle}>
                             <div className='particular-title'>{item.title}</div>
                         </div>
                         <div className='onclick-circle' style={item.circleStyle} />
