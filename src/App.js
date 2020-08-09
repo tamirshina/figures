@@ -24,11 +24,15 @@ function App() {
       //start is less than End
       setIsNormallMode(false);
     }
+    window.addEventListener("contextmenu", blockContextMenu);
 
   }, []);
 
-  const homeBtn = () => {
+  const blockContextMenu = (evt) => {
+    evt.preventDefault();
+  };
 
+  const homeBtn = () => {
     setIsParticularInfoPage(false);
     setIstFrontPage(true);
   };
