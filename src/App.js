@@ -96,7 +96,7 @@ function App() {
           {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
           <VideoComp />
           <LanguageBiv />
-          {!isFrontPage && <HomeBtn homeBtnLogic={homeBtn} />}
+          {isParticularInfoPage && <HomeBtn homeBtnLogic={homeBtn} />}
         </div>
         :
         <img src={errorImg} alt='error' className='full-background' />}
