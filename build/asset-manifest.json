@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3e79ec78.chunk.css",
+    "main.js": "/static/js/main.ffe339ad.chunk.js",
+    "main.js.map": "/static/js/main.ffe339ad.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.565c370b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.565c370b.js.map",
+    "static/js/2.1f00779b.chunk.js": "/static/js/2.1f00779b.chunk.js",
+    "static/js/2.1f00779b.chunk.js.map": "/static/js/2.1f00779b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c589bd56a4dc01e53610dec48d45d471.js": "/precache-manifest.c589bd56a4dc01e53610dec48d45d471.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3e79ec78.chunk.css.map": "/static/css/main.3e79ec78.chunk.css.map",
+    "static/js/2.1f00779b.chunk.js.LICENSE.txt": "/static/js/2.1f00779b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/VarelaRound-Regular.159cb67f.ttf",
+    "static/media/architects.png": "/static/media/architects.3f12f95d.png",
+    "static/media/architectsPic.png": "/static/media/architectsPic.afaf2b98.png",
+    "static/media/architectsVid.mp4": "/static/media/architectsVid.3c2adb42.mp4",
+    "static/media/backgroundOnly.png": "/static/media/backgroundOnly.44401de7.png",
+    "static/media/backgroundOnly2.png": "/static/media/backgroundOnly2.871a877c.png",
+    "static/media/dimitry.png": "/static/media/dimitry.be0f1f64.png",
+    "static/media/dimitryPic.png": "/static/media/dimitryPic.8fe862f7.png",
+    "static/media/dimitryVid.mp4": "/static/media/dimitryVid.7c77c04e.mp4",
+    "static/media/errorImg.png": "/static/media/errorImg.12ff4653.png",
+    "static/media/frame_down.png": "/static/media/frame_down.e50dd696.png",
+    "static/media/frame_left.png": "/static/media/frame_left.6377002f.png",
+    "static/media/frame_right.png": "/static/media/frame_right.c971889e.png",
+    "static/media/gurd.png": "/static/media/gurd.6222239b.png",
+    "static/media/gurdPic.png": "/static/media/gurdPic.bad48035.png",
+    "static/media/gurdVid.mp4": "/static/media/gurdVid.ea66fd23.mp4",
+    "static/media/pilgram.png": "/static/media/pilgram.68a76c87.png",
+    "static/media/pilgramPic.png": "/static/media/pilgramPic.f9c10ff0.png",
+    "static/media/pilgramVid.mp4": "/static/media/pilgramVid.583262fe.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.565c370b.js",
+    "static/js/2.1f00779b.chunk.js",
+    "static/css/main.3e79ec78.chunk.css",
+    "static/js/main.ffe339ad.chunk.js"
+  ]
+}
