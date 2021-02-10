@@ -16,14 +16,9 @@ function App() {
   const [isFrontPage, setIstFrontPage] = useState(true);
   const [typeOfParticularInfo, setTypeOfParticularInfo] = useState('dimitry');
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
-  const [isNormallMode, setIsNormallMode] = useState(true);
 
   useEffect(() => {
 
-    if (Date.now() > Date.parse('01/15/2021 12:00:00 AM')) {
-      //start is less than End
-      setIsNormallMode(false);
-    }
     window.addEventListener("contextmenu", blockContextMenu);
 
   }, []);
@@ -90,16 +85,15 @@ function App() {
 
   return (
     <>
-      {isNormallMode ?
-        <div>
-          {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
-          {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
-          <VideoComp />
-          <LanguageBiv />
-          {isParticularInfoPage && <HomeBtn homeBtnLogic={homeBtn} />}
-        </div>
-        :
-        <img src={errorImg} alt='error' className='full-background' />}
+      <div>
+        {isFrontPage && <FrontPage moveToParticularInfo={moveToParticularInfo} />}
+        {isParticularInfoPage && <ParticularInfoPage typeOfParticularInfo={typeOfParticularInfo} />}
+        <VideoComp />
+        <LanguageBiv />
+        {isParticularInfoPage && <HomeBtn homeBtnLogic={homeBtn} />}
+      </div>
+      :
+        <img src={errorImg} alt='error' className='full-background' />
     </>
   );
 }
