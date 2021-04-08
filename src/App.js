@@ -92,8 +92,6 @@ function App() {
         <LanguageBiv />
         {isParticularInfoPage && <HomeBtn homeBtnLogic={homeBtn} />}
       </div>
-      :
-        <img src={errorImg} alt='error' className='full-background' />
     </>
   );
 }
